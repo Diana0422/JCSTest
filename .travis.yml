@@ -1,0 +1,12 @@
+language: java
+jdk:
+- openjdk11
+
+addons:
+  sonarcloud:
+    organization: diana0422
+    token: 14176b6ad489d4ccadaed16370da4625233dbbd7 
+
+script: 
+- mvn test
+- sonar-scanner
