@@ -39,7 +39,6 @@ public class ParameterizedJCSUniTest {
 	
 	@Test
 	public void testJCS() throws Exception {
-		System.out.println(instanceName);
 		JCS jcs = JCS.getInstance(instanceName);
 		LinkedList<HashMap<String,String>> list = buildList();
 		jcs.put(keyString, list);
