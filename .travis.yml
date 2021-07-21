@@ -8,6 +8,6 @@ addons:
     token: 14176b6ad489d4ccadaed16370da4625233dbbd7 
 
 script: 
-- mvn clean package
+- mvn clean
 - mvn test
 - sonar-scanner
