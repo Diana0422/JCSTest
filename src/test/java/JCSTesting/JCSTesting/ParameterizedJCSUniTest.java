@@ -1,4 +1,4 @@
-package JCSTest.JCSTest;
+package JCSTesting.JCSTesting;
 
 import static org.junit.Assert.assertEquals;
 
