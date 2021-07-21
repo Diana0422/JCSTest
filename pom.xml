@@ -16,7 +16,8 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <jacoco.skip.instrument>true</jacoco.skip.instrument>
     <jacoco.version>0.8.4</jacoco.version>
-    <script.to.execute>java -jar src\test\resources\jacococli.jar report target\jacoco.exec --classfiles src\test\resources\jcs-1.3.jar --sourcefiles ${PATH_JCS_SRC} --html target\jacoco-gen\jcs-coverage\</script.to.execute>
+    <script.to.execute.windows>java -jar src\test\resources\jacococli.jar report target\jacoco.exec --classfiles src\test\resources\jcs-1.3.jar --sourcefiles ${PATH_JCS_SRC} --html target\jacoco-gen\jcs-coverage\</script.to.execute.windows>
+    <script.to.execute.unix>java -jar src/test/resources/jacococli.jar report target/jacoco.exec --classfiles src/test/resources/jcs-1.3.jar --sourcefiles ${PATH_JCS_SRC} --html target/jacoco-gen/jcs-coverage/</script.to.execute.unix>
     <script.executor.windows>powershell.exe</script.executor.windows>
     <script.executor.unix>bash</script.executor.unix>
     <argLine></argLine>
@@ -158,7 +159,7 @@
 							<phase>package</phase>
 							<configuration>
 								<executable>${script.executor.windows}</executable>
-								<commandlineArgs>${script.to.execute}</commandlineArgs>
+								<commandlineArgs>${script.to.execute.windows}</commandlineArgs>
 							</configuration>
 							<goals>
 								<goal>exec</goal>
@@ -254,7 +255,7 @@
 							<phase>package</phase>
 							<configuration>
 								<executable>${script.executor.unix}</executable>
-								<commandlineArgs>${script.to.execute}</commandlineArgs>
+								<commandlineArgs>${script.to.execute.unix}</commandlineArgs>
 							</configuration>
 							<goals>
 								<goal>exec</goal>
